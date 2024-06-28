@@ -40,11 +40,11 @@ services:
       context: .
       dockerfile: Dockerfile
     environment:
-      - HOUSEHOLD_FILE_PATH=miami_household_consumption_with_timestamps.json
-      - SOLAR_FILE_PATH=miami_solar_output_with_timestamps.json
-      - OUTPUT_FILE_PATH=/app/reports/total_consumption_report.json # Nombre de archivo de salida
+      - HOUSEHOLD_FILE_PATH=miami_household_consumption_with_timestamps.json # Nombre de archivo de consumo del hogar
+      - SOLAR_FILE_PATH=miami_solar_output_with_timestamps.json # Nombre de archivo de panel solar
+      - REPORT_FILE_PATH=/app/reports/total_consumption_report.json # Nombre de archivo de salida
     volumes:
-      - ./reports:/app/reports  # Mapeo de carpeta de salida
+      - ./reports:/app/reports
 ```
 
 ## Ejecución del Proyecto
