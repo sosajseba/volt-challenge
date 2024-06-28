@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  report-service:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - HOUSEHOLD_FILE_PATH=miami_household_consumption_with_timestamps.json
+      - SOLAR_FILE_PATH=miami_solar_output_with_timestamps.json
+      - REPORT_FILE_PATH=/app/reports/total_consumption_report.json
+    volumes:
+      - ./reports:/app/reports
