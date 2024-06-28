@@ -14,6 +14,8 @@ if (string.IsNullOrEmpty(electricityFilePath) || string.IsNullOrEmpty(solarFileP
     return;
 }
 
+Console.WriteLine($"Generating report...");
+
 ReportService reportService = new();
 
 await reportService.GenerateReportAsync(electricityFilePath, solarFilePath, reportFilePath);
